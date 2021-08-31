@@ -15,6 +15,9 @@ public class StackAndQueueTest {
 		myQueue.enqueue(thirdNode);
 		myQueue.printQueue();
 		
+		myQueue.dequeue();
+		System.out.println("After dequeue: ");
+		myQueue.printQueue();
 	}
 
 }
