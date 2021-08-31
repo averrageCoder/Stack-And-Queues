@@ -27,7 +27,7 @@ public class MyStackAndQueue {
 		StringBuffer myNodes = new StringBuffer("My nodes: ");
 		INode tempNode = this.top;
 		if(tempNode==null)
-			System.out.println("Empty List!");
+			System.out.println("Empty Stack!");
 		else {
 			while(tempNode.getNext()!=null) {
 				myNodes.append(tempNode.getKey());
@@ -36,6 +36,29 @@ public class MyStackAndQueue {
 			}
 			myNodes.append(tempNode.getKey());
 			System.out.println(myNodes);
+		}
+	}
+	
+	public INode peek() {
+		return this.top;
+	}
+	
+	public INode pop() {
+		INode tempNode = this.top;
+		this.top = tempNode.getNext();
+		return tempNode;
+	}
+	
+	public void popTillEmpty() {
+		INode tempNode = this.top;
+		if(tempNode==null)
+			System.out.println("Empty Stack!");
+		else {
+			while(tempNode.getNext()!=null) {
+				tempNode = this.top;
+				this.top = tempNode.getNext();
+				System.out.println("Popped Element: "+tempNode.getKey());
+			}
 		}
 	}
 	
