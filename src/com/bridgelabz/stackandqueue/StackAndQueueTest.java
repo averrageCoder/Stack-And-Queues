@@ -4,19 +4,17 @@ public class StackAndQueueTest {
 
 	public static void main(String[] args) {
 		
-		MyNode<Integer> firstNode = new MyNode<Integer>(70);
+		MyNode<Integer> firstNode = new MyNode<Integer>(56);
 		MyNode<Integer> secondNode = new MyNode<Integer>(30);
-		MyNode<Integer> thirdNode = new MyNode<Integer>(56);
+		MyNode<Integer> thirdNode = new MyNode<Integer>(70);
 		
-		MyStackAndQueue myStack = new MyStackAndQueue();
-		myStack.push(firstNode);
-		myStack.push(secondNode);
-		myStack.push(thirdNode);
-		myStack.printMyNodes();
+		MyQueue myQueue = new MyQueue();
+		myQueue.enqueue(firstNode);
+		//myQueue.printQueue();
+		myQueue.enqueue(secondNode);
+		myQueue.enqueue(thirdNode);
+		myQueue.printQueue();
 		
-		System.out.println("Peek top element: "+myStack.peek().getKey());
-		
-		myStack.popTillEmpty();
 	}
 
 }
