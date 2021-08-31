@@ -13,6 +13,10 @@ public class StackAndQueueTest {
 		myStack.push(secondNode);
 		myStack.push(thirdNode);
 		myStack.printMyNodes();
+		
+		System.out.println("Peek top element: "+myStack.peek().getKey());
+		
+		myStack.popTillEmpty();
 	}
 
 }
